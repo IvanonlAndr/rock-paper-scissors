@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+
+* {
+    font-family: 'Roboto Mono';
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 75px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+li.pick__one img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+li.pick__one button {
+    border: 2px solid #000000;
+    background-color: transparent;
+    width: 315px;
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #000000;
+}
+
+li.pick__one button:hover {
+    outline: 10px solid #FFB800;
+}
+
+/* стили втрой страницы */
+
+body.winner.you__win {
+    background-image: url(./img/you-win.svg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+
+body.winner.computer__win {
+    background-image: url(./img/computer-wins.svg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+body.computer__win h1.you__win,
+body.you__win h1.computer__win {
+    visibility: hidden;
+}
+
+body.winner .wrapper {
+    display: flex;
+    gap: 200px;
+    position: relative;
+}
+
+body.winner img{
+    mix-blend-mode: multiply;
+}
+
+.your__pick {}
+
+.you__win {}
+
+.computer__pick img {
+    transform: scaleX(-1);
+}
+
+.computer__win {}
+
+.play__again {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 380px;
+    height: 72px;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    color: #000000;
+    border: 2px solid #000000
+}
+
+.play__again:hover {
+    background-color: #000000;
+    color: #fff;
+}
